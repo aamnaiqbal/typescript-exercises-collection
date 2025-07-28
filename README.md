@@ -1,6 +1,6 @@
 # TypeScript Programming Exercises
 
-This repository contains TypeScript solutions for fundamental programming exercises covering variables, strings, arrays, and basic operations.
+This repository contains TypeScript solutions for 20 fundamental programming exercises covering variables, strings, arrays, and basic operations.
 
 ## Prerequisites
 
@@ -11,11 +11,61 @@ This repository contains TypeScript solutions for fundamental programming exerci
 ## File Structure
 
 ```
-TS/
-├── Q1_Q16.ts          # Main TypeScript file with exercises
+typescript-exercises-collection/
+├── Q1_Q20.ts          # Main TypeScript file with all 20 exercises (Q1-Q20)
+├── Q1_Q20.js          # Compiled JavaScript output
 ├── README.md          # This file
 
 ```
+
+## How to Run
+
+### Compile and Run
+
+```bash
+# Compile TypeScript to JavaScript
+tsc Q1_Q20.ts
+
+# Run the compiled JavaScript
+node Q1_Q20.js
+```
+
+## Expected Output
+
+The program will display output for each of the 20 exercise sections, marked with separators like:
+
+```
+---------Q2---------
+Hello Aamna, would you like to learn some Python today?
+
+---------Q3---------
+Upper case: ATOOFA
+Lower case: atoofa
+Title case: Atoofa
+
+--------Q20--------
+1. Mercury
+2. Venus
+3. Earth
+4. Mars
+5. Jupiter
+6. Saturn
+7. Uranus
+8. Neptune
+```
+
+## Learning Objectives
+
+By completing these 20 exercises, you will learn:
+
+- TypeScript syntax and type annotations
+- Variable declarations and string manipulation
+- Array creation and manipulation methods
+- Control structures (loops, conditionals)
+- Template literals and string interpolation
+- Advanced array operations (sorting, reversing, slicing)
+- Basic program organization and commenting
+- Problem-solving with data structures
 
 ## Exercises Overview
 
@@ -84,6 +134,28 @@ TS/
   - `splice()` - Add to middle
   - `push()` - Add to end
 
+### **Q17**: Shrinking Guest List
+
+- Handle space constraints by removing guests from the list
+- Use `pop()` method to remove guests one at a time
+- Print apology messages to removed guests
+
+### **Q18**: Seeing the World
+
+- Create a list of places to visit
+- Practice array sorting and reversing without modifying original array
+- Demonstrate `.slice()`, `.sort()`, and `.reverse()` methods
+
+### **Q19**: Dinner Guests
+
+- Calculate and display the number of dinner guests
+- Use array `.length` property to count elements
+
+### **Q20**: Custom Array
+
+- Create your own array of items (planets, countries, languages, etc.)
+- Display array contents in a formatted list
+
 ## Key Concepts Demonstrated
 
 ### **Variables & Data Types**
@@ -109,6 +181,10 @@ guestList.push("NewGuest"); // Add to end
 guestList.unshift("NewGuest"); // Add to beginning
 guestList.splice(2, 0, "NewGuest"); // Insert at index 2
 guestList.indexOf("GuestName"); // Find index of element
+guestList.pop(); // Remove last element
+guestList.sort(); // Sort alphabetically
+guestList.reverse(); // Reverse array order
+array.slice().sort(); // Sort without modifying original
 ```
 
 ### **Template Literals**
@@ -124,43 +200,6 @@ for (let i = 0; i < array.length; i++) {
   console.log(array[i]);
 }
 ```
-
-## How to Run
-
-### Compile and Run
-
-```bash
-# Compile TypeScript to JavaScript
-tsc Q1_Q16.ts
-
-# Run the compiled JavaScript
-node Q1_Q16.js
-```
-
-## Expected Output
-
-The program will display output for each exercise section, marked with separators like:
-
-```
----------Q2---------
-Hello Aamna, would you like to learn some Python today?
-
----------Q3---------
-Upper case: ATOOFA
-Lower case: atoofa
-Title case: Atoofa
-```
-
-## Learning Objectives
-
-By completing these exercises, you will learn:
-
-- TypeScript syntax and type annotations
-- Variable declarations and string manipulation
-- Array creation and manipulation methods
-- Control structures (loops, conditionals)
-- Template literals and string interpolation
-- Basic program organization and commenting
 
 ## Author
 

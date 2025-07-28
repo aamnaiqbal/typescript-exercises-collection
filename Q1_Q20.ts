@@ -68,13 +68,13 @@ console.log(16 / 2);
 console.log("---------Q11---------");
 let names: string[] = ["Zainab", "Savera", "Maira"];
 console.log("Friends' names:");
-for (let i = 0; i < names.length; i++) {
+for (let i: number = 0; i < names.length; i++) {
   console.log(names[i]);
 }
 
 //Q12: Greetings: Start with the array you used in Exercise 11, but instead of just printing each person’s name, print a message to them. The text of each message should be the same, but each message should be personalized with the person’s name.
 console.log("--------Q12--------");
-for (let i = 0; i < names.length; i++) {
+for (let i: number = 0; i < names.length; i++) {
   console.log(`Hello ${names[i]}, how are you doing?`);
 }
 
@@ -86,7 +86,7 @@ let transportationModes: string[] = [
   "Bugatti",
   "Porsche 911",
 ];
-for (let i = 0; i < transportationModes.length; i++) {
+for (let i: number = 0; i < transportationModes.length; i++) {
   console.log(`I would like to own a ${transportationModes[i]}.`);
 }
 
@@ -101,7 +101,7 @@ let guestList: string[] = [
   "Arham",
   "Maira",
 ];
-for (let i = 0; i < guestList.length; i++) {
+for (let i: number = 0; i < guestList.length; i++) {
   console.log(`Dear ${guestList[i]}, I would like to invite you to dinner.`);
 }
 
@@ -128,7 +128,7 @@ if (guestIndexToReplace !== -1) {
 
 //Print a second set of invitation messages
 console.log("Updated invitations:");
-for (let i = 0; i < guestList.length; i++) {
+for (let i: number = 0; i < guestList.length; i++) {
   console.log(`Dear ${guestList[i]}, I would like to invite you to dinner.`);
 }
 
@@ -150,8 +150,117 @@ let newGuestAtEnd: string = "Arooba";
 guestList.push(newGuestAtEnd);
 
 // • Print a new set of invitation messages, one for each person in your list.
-for (let i = 0; i < guestList.length; i++) {
+for (let i: number = 0; i < guestList.length; i++) {
   console.log(
     `Dear ${guestList[i]}, I would like to invite you to dinner. It is going to be a grand event with more guests!`
   );
+}
+
+// Q17: Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests.
+
+console.log("--------Q17--------");
+// • Start with your program from Exercise 16. Add a new line that prints a message saying that you can invite only two people for dinner.
+for (let i: number = 0; i < guestList.length; i++) {
+  console.log(
+    `Sorry ${guestList[i]}, I can invite only two people to dinner due to space constraints.`
+  );
+}
+// • Remove guests from your list one at a time until only two names remain in your list. Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+for (let i: number = guestList.length; i > 2; i--) {
+  let removedGuest: string = guestList.pop() || "";
+  console.log(
+    `Sorry ${removedGuest}, I can't invite you to dinner due to space constraints.`
+  );
+}
+// • Print a message to each of the two people still on your list, letting them know they’re still invited.
+for (let i: number = 0; i < guestList.length; i++) {
+  console.log(`Dear ${guestList[i]}, you are still invited to dinner.`);
+}
+
+// • Remove the last two names from your list, so you have an empty list. Print your list to make sure you actually have an empty list at the end of your program.
+while (guestList.length > 0) {
+  guestList.pop();
+}
+console.log("Final empty guest list:", guestList);
+
+//Q18: Seeing the World: Think of at least five places in the world you’d like to visit.
+// • Store the locations in a array. Make sure the array is not in alphabetical order.
+console.log("--------Q18--------");
+
+let placesToVisit: string[] = ["Paris", "Tokyo", "New York", "Canada", "Spain"];
+// • Print your array in its original order.
+console.log(`Original order of places to visit: [${placesToVisit}]`);
+// • Print your array in alphabetical order without modifying the actual list.
+console.log(
+  `Alphabetical order of places to visit: [${placesToVisit.slice().sort()}]`
+);
+
+// • Show that your array is still in its original order by printing it.
+console.log(`Original order of places to visit: [${placesToVisit}]`);
+
+// • Print your array in reverse alphabetical order without changing the order of the original list.
+console.log(
+  `Reverse alphabetical order of places to visit: [${placesToVisit
+    .slice()
+    .sort()
+    .reverse()}]`
+);
+
+// • Show that your array is still in its original order by printing it again.
+console.log(`Original order of places to visit: [${placesToVisit}]`);
+
+// • Reverse the order of your list. Print the array to show that its order has changed.
+console.log(`Reversed order of places to visit: [${placesToVisit.reverse()}]`);
+
+// • Reverse the order of your list again. Print the list to show it’s back to its original order.
+console.log(
+  `Back to original order of places to visit: [${placesToVisit.reverse()}]`
+);
+
+// • Sort your array so it’s stored in alphabetical order. Print the array to show that its order has been changed.
+placesToVisit.sort();
+console.log(`Alphabetical order (modified original): [${placesToVisit}]`);
+
+// • Sort to change your array so it’s stored in reverse alphabetical order. Print the list to show that its order has changed.
+placesToVisit.sort().reverse();
+console.log(
+  `Reverse alphabetical order (modified original): [${placesToVisit}]`
+);
+
+//Q19: Dinner Guests: Working with one of the programs from Exercises 14 through 18, print a message indicating the number of people you are inviting to dinner.
+
+console.log("--------Q19--------");
+
+// Let's reuse the guest list before it was emptied
+
+guestList = [
+  "Ali",
+  "Zainab",
+  "Savera",
+  "Sania",
+  "Simrah",
+  "Shehnila",
+  "Arham",
+  "Maira",
+  "Arooba",
+];
+console.log(`Number of people invited to dinner: ${guestList.length}`);
+
+//Q20: Think of something you could store in a array. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you'd like. Write a program that creates a list containing these items.
+
+console.log("--------Q20--------");
+
+// Creating a list of programming languages
+let planets: string[] = [
+  "Mercury",
+  "Venus",
+  "Earth",
+  "Mars",
+  "Jupiter",
+  "Saturn",
+  "Uranus",
+  "Neptune",
+];
+for (let i: number = 0; i < planets.length; i++) {
+  console.log(`${i + 1}. ${planets[i]}`);
 }
