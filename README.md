@@ -1,6 +1,6 @@
 # TypeScript Programming Exercises
 
-This repository contains TypeScript solutions for 20 fundamental programming exercises covering variables, strings, arrays, and basic operations.
+This repository contains TypeScript solutions for 27 fundamental programming exercises covering variables, strings, arrays, objects, and conditional logic.
 
 ## Prerequisites
 
@@ -12,17 +12,24 @@ This repository contains TypeScript solutions for 20 fundamental programming exe
 
 ```
 typescript-exercises-collection/
-├── Q1_Q20.ts          # Main TypeScript file with all 20 exercises (Q1-Q20)
-├── Q1_Q20.js          # Compiled JavaScript output
-├── README.md          # This file
+├── Q1_Q20/
+│   └── Q1_Q20.ts          # First 20 exercises (Q1-Q20)
+├── Q21_Q27/
+│   └── Q21_Q27.ts         # Advanced exercises (Q21-Q27)
+└── README.md              # This file
 
 ```
 
 ## How to Run
 
-### Compile and Run
+## How to Run
+
+### Compile and Run Q1-Q20
 
 ```bash
+# Navigate to Q1_Q20 folder
+cd Q1_Q20
+
 # Compile TypeScript to JavaScript
 tsc Q1_Q20.ts
 
@@ -30,9 +37,24 @@ tsc Q1_Q20.ts
 node Q1_Q20.js
 ```
 
+### Compile and Run Q21-Q27
+
+```bash
+# Navigate to Q21_Q27 folder
+cd Q21_Q27
+
+# Compile TypeScript to JavaScript
+tsc Q21_Q27.ts
+
+# Run the compiled JavaScript
+node Q21_Q27.js
+```
+
 ## Expected Output
 
-The program will display output for each of the 20 exercise sections, marked with separators like:
+The program will display output for each of the 27 exercise sections, marked with separators like:
+
+**From Q1-Q20:**
 
 ```
 ---------Q2---------
@@ -54,16 +76,33 @@ Title case: Atoofa
 8. Neptune
 ```
 
+**From Q21-Q27:**
+
+```
+--- Q:21 ---
+Person Object: { firstName: 'Aamna', lastName: 'Iqbal', age: 30, occupation: 'Software Developer' }
+
+--- Q:22 ---
+Accessing an out-of-bounds index: undefined
+Accessing a valid index: Islamabad
+
+--- Q:23 ---
+Is car == 'subaru'? I predict True.
+true
+```
+
 ## Learning Objectives
 
-By completing these 20 exercises, you will learn:
+By completing these 27 exercises, you will learn:
 
 - TypeScript syntax and type annotations
 - Variable declarations and string manipulation
 - Array creation and manipulation methods
+- Object creation and interface definitions
 - Control structures (loops, conditionals)
 - Template literals and string interpolation
 - Advanced array operations (sorting, reversing, slicing)
+- Conditional logic and boolean operations
 - Basic program organization and commenting
 - Problem-solving with data structures
 
@@ -156,6 +195,48 @@ By completing these 20 exercises, you will learn:
 - Create your own array of items (planets, countries, languages, etc.)
 - Display array contents in a formatted list
 
+## Advanced Exercises (Q21-Q27)
+
+### **Q21**: Objects and Interfaces
+
+- Create TypeScript objects with interface definitions
+- Store complex data structures with multiple properties
+
+### **Q22**: Intentional Error
+
+- Practice debugging by creating and fixing array index errors
+- Learn about bounds checking and error handling
+
+### **Q23**: Conditional Tests
+
+- Write conditional tests with predictions
+- Practice boolean logic and comparison operators
+- Create at least 10 tests (5 true, 5 false)
+
+### **Q24**: More Conditional Tests
+
+- Advanced conditional testing with various operators
+- Test equality, inequality, logical operators
+- Work with different data types in conditions
+
+### **Q25**: Alien Colors #1
+
+- Introduction to if statements
+- Basic conditional logic with game scenarios
+- Understanding program flow control
+
+### **Q26**: Alien Colors #2
+
+- Implement if-else chains
+- Handle multiple conditions
+- Practice decision-making logic
+
+### **Q27**: Alien Colors #3
+
+- Complex if-else-if chains
+- Multiple conditional branches
+- Advanced program flow control
+
 ## Key Concepts Demonstrated
 
 ### **Variables & Data Types**
@@ -164,6 +245,24 @@ By completing these 20 exercises, you will learn:
 let personName: string = "Aamna";
 const favoriteNumber: number = 6;
 let guestList: string[] = ["Ali", "Sara", "Ahmed"];
+```
+
+### **Objects & Interfaces**
+
+```typescript
+interface Person {
+  firstName: string;
+  lastName: string;
+  age: number;
+  occupation: string;
+}
+
+let person: Person = {
+  firstName: "Aamna",
+  lastName: "Iqbal",
+  age: 30,
+  occupation: "Software Developer",
+};
 ```
 
 ### **String Manipulation**
@@ -185,6 +284,18 @@ guestList.pop(); // Remove last element
 guestList.sort(); // Sort alphabetically
 guestList.reverse(); // Reverse array order
 array.slice().sort(); // Sort without modifying original
+```
+
+### **Conditional Logic**
+
+```typescript
+if (alien_color === "green") {
+  console.log("Player earned 5 points");
+} else if (alien_color === "yellow") {
+  console.log("Player earned 10 points");
+} else {
+  console.log("Player earned 15 points");
+}
 ```
 
 ### **Template Literals**
