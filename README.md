@@ -1,6 +1,6 @@
 # TypeScript Programming Exercises
 
-This repository contains TypeScript solutions for 27 fundamental programming exercises covering variables, strings, arrays, objects, and conditional logic.
+This repository contains TypeScript solutions for 39 fundamental programming exercises covering variables, strings, arrays, objects, conditional logic, and functions.
 
 ## Prerequisites
 
@@ -13,12 +13,20 @@ This repository contains TypeScript solutions for 27 fundamental programming exe
 ```
 typescript-exercises-collection/
 ├── Q1_Q20/
-│   └── Q1_Q20.ts          # First 20 exercises (Q1-Q20)
+│   └── Q1_Q20.ts          # Basic exercises (Q1-Q20)
 ├── Q21_Q27/
-│   └── Q21_Q27.ts         # Advanced exercises (Q21-Q27)
+│   └── Q21_Q27.ts         # Objects & conditionals (Q21-Q27)
+├── Q28_Q35/
+│   └── Q28_Q35.ts         # Advanced conditionals & loops (Q28-Q35)
+├── Q36_Q39/
+│   └── Q36_Q39.ts         # Functions (Q36-Q39)
+├── Q40_Q45/
+│   └── Q40_Q45.ts         # Advanced functions (Q40-Q45) [In Progress]
 └── README.md              # This file
 
 ```
+
+## How to Run
 
 ## How to Run
 
@@ -50,9 +58,35 @@ tsc Q21_Q27.ts
 node Q21_Q27.js
 ```
 
+### Compile and Run Q28-Q35
+
+```bash
+# Navigate to Q28_Q35 folder
+cd Q28_Q35
+
+# Compile TypeScript to JavaScript
+tsc Q28_Q35.ts
+
+# Run the compiled JavaScript
+node Q28_Q35.js
+```
+
+### Compile and Run Q36-Q39
+
+```bash
+# Navigate to Q36_Q39 folder
+cd Q36_Q39
+
+# Compile TypeScript to JavaScript
+tsc Q36_Q39.ts
+
+# Run the compiled JavaScript
+node Q36_Q39.js
+```
+
 ## Expected Output
 
-The program will display output for each of the 27 exercise sections, marked with separators like:
+The program will display output for each of the 39 exercise sections, marked with separators like:
 
 **From Q1-Q20:**
 
@@ -91,9 +125,42 @@ Is car == 'subaru'? I predict True.
 true
 ```
 
+**From Q28-Q35:**
+
+```
+---------Q28----------
+The person is an adult.
+
+---------Q29----------
+You really like apples!
+You really like bananas!
+You really like mangoes!
+
+---------Q34----------
+I love Margherita pizza!
+I love Pepperoni pizza!
+I love Veggie pizza!
+```
+
+**From Q36-Q39:**
+
+```
+---------Q36----------
+You ordered a Large shirt with the message "Hello World!"
+
+---------Q37----------
+You ordered a Large shirt with the message "I love TypeScript"
+
+---------Q38----------
+Karachi is in Pakistan.
+
+---------Q39----------
+Karachi, Pakistan
+```
+
 ## Learning Objectives
 
-By completing these 27 exercises, you will learn:
+By completing these 39 exercises, you will learn:
 
 - TypeScript syntax and type annotations
 - Variable declarations and string manipulation
@@ -103,6 +170,9 @@ By completing these 27 exercises, you will learn:
 - Template literals and string interpolation
 - Advanced array operations (sorting, reversing, slicing)
 - Conditional logic and boolean operations
+- Function definitions and parameter handling
+- Default parameters and return values
+- Error handling and debugging techniques
 - Basic program organization and commenting
 - Problem-solving with data structures
 
@@ -237,6 +307,82 @@ By completing these 27 exercises, you will learn:
 - Multiple conditional branches
 - Advanced program flow control
 
+## More Advanced Exercises (Q28-Q35)
+
+### **Q28**: Stages of Life
+
+- Complex if-else-if chains for age categorization
+- Multiple conditional ranges
+- Real-world conditional logic examples
+
+### **Q29**: Favorite Fruit
+
+- Array searching with conditional statements
+- Using `indexOf()` method for element checking
+- Independent if statements vs. if-else chains
+
+### **Q30**: Hello Admin
+
+- User authentication simulation
+- Special handling for admin users
+- Loop-based user greeting system
+
+### **Q31**: No Users
+
+- Empty array validation
+- Defensive programming practices
+- Conditional execution based on array length
+
+### **Q32**: Checking Usernames
+
+- Username uniqueness validation
+- Array comparison and duplicate detection
+- Simulating real-world web application logic
+
+### **Q33**: Ordinal Numbers
+
+- Number formatting and conditional text
+- Special cases in programming logic
+- String manipulation based on numeric values
+
+### **Q34**: Pizzas
+
+- Basic for loop implementation
+- Array iteration and display
+- Simple list processing
+
+### **Q35**: Animals
+
+- Enhanced for loop with additional statements
+- Multiple output formats for same data
+- Summary statements after processing
+
+## Function-Based Exercises (Q36-Q39)
+
+### **Q36**: T-Shirt Function
+
+- Basic function definition and parameters
+- Function calls with different arguments
+- Simple string formatting in functions
+
+### **Q37**: Large Shirts with Defaults
+
+- Default parameter values
+- Function overloading concepts
+- Flexible function design
+
+### **Q38**: Cities Function
+
+- Functions with default country parameter
+- Geographic data processing
+- Parameter flexibility and defaults
+
+### **Q39**: City Country Function
+
+- Functions with return values
+- String formatting and return statements
+- Function composition and reusability
+
 ## Key Concepts Demonstrated
 
 ### **Variables & Data Types**
@@ -286,15 +432,52 @@ guestList.reverse(); // Reverse array order
 array.slice().sort(); // Sort without modifying original
 ```
 
-### **Conditional Logic**
+### **Functions**
 
 ```typescript
-if (alien_color === "green") {
-  console.log("Player earned 5 points");
-} else if (alien_color === "yellow") {
-  console.log("Player earned 10 points");
-} else {
-  console.log("Player earned 15 points");
+// Basic function
+function make_shirt(size: string, message: string): void {
+  console.log(`You ordered a ${size} shirt with the message "${message}"`);
+}
+
+// Function with default parameters
+function make_shirt_default(
+  size: string = "Large",
+  message: string = "I love TypeScript"
+): void {
+  console.log(`You ordered a ${size} shirt with the message "${message}"`);
+}
+
+// Function with return value
+function city_country(city: string, country: string): string {
+  return `${city}, ${country}`;
+}
+```
+
+### **Advanced Array Searching**
+
+```typescript
+// Using indexOf() for element checking (ES5 compatible)
+if (favourite_fruits.indexOf("apple") !== -1) {
+  console.log("You really like apples!");
+}
+
+// Array length validation
+if (usernames.length === 0) {
+  console.log("We need to find some users!");
+}
+```
+
+### **Loop Variations**
+
+```typescript
+// Enhanced for loop with conditional logic
+for (let i = 0; i < usernames.length; i++) {
+  if (usernames[i] === "admin") {
+    console.log("Hello admin, would you like to see a status report?");
+  } else {
+    console.log(`Hello ${usernames[i]}, thank you for logging in again.`);
+  }
 }
 ```
 
