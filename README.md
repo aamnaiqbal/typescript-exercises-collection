@@ -28,10 +28,6 @@ typescript-exercises-collection/
 
 ## How to Run
 
-## How to Run
-
-## How to Run
-
 ### Compile and Run Q1-Q20
 
 ```bash
@@ -101,8 +97,6 @@ node Q40_Q43.js
 
 The program will display output for each of the 43 exercise sections, marked with separators like:
 
-**From Q1-Q20:**
-
 ```
 ---------Q2---------
 Hello Aamna, would you like to learn some Python today?
@@ -112,98 +106,6 @@ Upper case: ATOOFA
 Lower case: atoofa
 Title case: Atoofa
 
---------Q20--------
-1. Mercury
-2. Venus
-3. Earth
-4. Mars
-5. Jupiter
-6. Saturn
-7. Uranus
-8. Neptune
-```
-
-**From Q21-Q27:**
-
-```
---- Q:21 ---
-Person Object: { firstName: 'Aamna', lastName: 'Iqbal', age: 30, occupation: 'Software Developer' }
-
---- Q:22 ---
-Accessing an out-of-bounds index: undefined
-Accessing a valid index: Islamabad
-
---- Q:23 ---
-Is car == 'subaru'? I predict True.
-true
-```
-
-**From Q28-Q35:**
-
-```
----------Q28----------
-The person is an adult.
-
----------Q29----------
-You really like apples!
-You really like bananas!
-You really like mangoes!
-
----------Q34----------
-I love Margherita pizza!
-I love Pepperoni pizza!
-I love Veggie pizza!
-```
-
-**From Q36-Q39:**
-
-```
----------Q36----------
-You ordered a Large shirt with the message "Hello World!"
-
----------Q37----------
-You ordered a Large shirt with the message "I love TypeScript"
-
----------Q38----------
-Karachi is in Pakistan.
-
----------Q39----------
-Karachi, Pakistan
-```
-
-**From Q40-Q43:**
-
-```
------Q:40-----
-{ artist: 'Artist 1', title: 'Album 1' }
-{ artist: 'Artist 2', title: 'Album 2', tracks: 10 }
-{ artist: 'Artist 3', title: 'Album 3', tracks: 8 }
-
------Q:41-----
-Harry Houdini
-David Blaine
-Criss Angel
-Derren Brown
-
------Q:42-----
-Great Harry Houdini
-Great David Blaine
-Great Criss Angel
-Great Derren Brown
-
------Q:43-----
-Original Magicians:
-Harry Houdini
-David Blaine
-Criss Angel
-Derren Brown
-
-Great Magicians:
-the Great Harry Houdini
-the Great David Blaine
-the Great Criss Angel
-the Great Derren Brown
-```
 
 ## Learning Objectives
 
