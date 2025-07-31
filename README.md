@@ -1,6 +1,6 @@
 # TypeScript Programming Exercises
 
-This repository contains TypeScript solutions for 39 fundamental programming exercises covering variables, strings, arrays, objects, conditional logic, and functions.
+This repository contains TypeScript solutions for 43 fundamental programming exercises covering variables, strings, arrays, objects, conditional logic, and functions.
 
 ## Prerequisites
 
@@ -20,8 +20,8 @@ typescript-exercises-collection/
 │   └── Q28_Q35.ts         # Advanced conditionals & loops (Q28-Q35)
 ├── Q36_Q39/
 │   └── Q36_Q39.ts         # Functions (Q36-Q39)
-├── Q40_Q45/
-│   └── Q40_Q45.ts         # Advanced functions (Q40-Q45) [In Progress]
+├── Q40_Q43/
+│   └── Q40_Q43.ts         # Advanced functions & arrays (Q40-Q43)
 └── README.md              # This file
 
 ```
@@ -84,9 +84,22 @@ tsc Q36_Q39.ts
 node Q36_Q39.js
 ```
 
+### Compile and Run Q40-Q43
+
+```bash
+# Navigate to Q40_Q43 folder
+cd Q40_Q43
+
+# Compile TypeScript to JavaScript
+tsc Q40_Q43.ts
+
+# Run the compiled JavaScript
+node Q40_Q43.js
+```
+
 ## Expected Output
 
-The program will display output for each of the 39 exercise sections, marked with separators like:
+The program will display output for each of the 43 exercise sections, marked with separators like:
 
 **From Q1-Q20:**
 
@@ -158,9 +171,43 @@ Karachi is in Pakistan.
 Karachi, Pakistan
 ```
 
+**From Q40-Q43:**
+
+```
+-----Q:40-----
+{ artist: 'Artist 1', title: 'Album 1' }
+{ artist: 'Artist 2', title: 'Album 2', tracks: 10 }
+{ artist: 'Artist 3', title: 'Album 3', tracks: 8 }
+
+-----Q:41-----
+Harry Houdini
+David Blaine
+Criss Angel
+Derren Brown
+
+-----Q:42-----
+Great Harry Houdini
+Great David Blaine
+Great Criss Angel
+Great Derren Brown
+
+-----Q:43-----
+Original Magicians:
+Harry Houdini
+David Blaine
+Criss Angel
+Derren Brown
+
+Great Magicians:
+the Great Harry Houdini
+the Great David Blaine
+the Great Criss Angel
+the Great Derren Brown
+```
+
 ## Learning Objectives
 
-By completing these 39 exercises, you will learn:
+By completing these 43 exercises, you will learn:
 
 - TypeScript syntax and type annotations
 - Variable declarations and string manipulation
@@ -383,6 +430,36 @@ By completing these 39 exercises, you will learn:
 - String formatting and return statements
 - Function composition and reusability
 
+## Advanced Function Exercises (Q40-Q43)
+
+### **Q40**: Album Function
+
+- Object creation with interfaces
+- Optional parameters in functions
+- Creating functions that return complex objects
+- Handling conditional object properties
+
+### **Q41**: Magicians Array
+
+- Array iteration with for-of loops
+- Function parameters for array processing
+- Separation of data and display logic
+- Reusable display functions
+
+### **Q42**: Great Magicians (Modifying Original)
+
+- Array modification in-place
+- Destructive array operations
+- Understanding reference vs. value semantics
+- Side effects in functions
+
+### **Q43**: Unchanged Magicians (Preserving Original)
+
+- Non-destructive array operations
+- Creating copies with spread operator (`...`)
+- Pure functions vs. functions with side effects
+- Comparing original and modified data
+
 ## Key Concepts Demonstrated
 
 ### **Variables & Data Types**
@@ -452,6 +529,55 @@ function make_shirt_default(
 function city_country(city: string, country: string): string {
   return `${city}, ${country}`;
 }
+```
+
+### **Advanced Functions with Objects (Q40-Q43)**
+
+```typescript
+// Interface definition for complex objects
+interface Album {
+    artist: string;
+    title: string;
+    tracks?: number;  // Optional property
+}
+
+// Function with optional parameters
+const make_album = (artist_name: string, album_title: string, tracks: number = 0): Album => {
+    const album: Album = {
+        artist: artist_name,
+        title: album_title
+    }
+    if(tracks) {
+        album['tracks'] = tracks;
+    }
+    return album;
+}
+
+// Array processing functions
+const show_magicians = (magicians: string[]): void => {
+    for(const magician of magicians) {
+        console.log(magician);
+    }
+}
+
+// Destructive array modification (modifies original)
+const make_great = (magicians: string[]): void => {
+    for(let i = 0; i < magicians.length; i++){
+        magicians[i] = `Great ${magicians[i]}`;
+    }
+}
+
+// Non-destructive array processing (preserves original)
+function make_great_magicians(magicianNames: string[]): string[] {
+    const greatMagicians: string[] = [];
+    for (const name of magicianNames) {
+        greatMagicians.push("the Great " + name);
+    }
+    return greatMagicians;
+}
+
+// Using spread operator to create array copies
+const greatMagicians = make_great_magicians([...magicians_names]);
 ```
 
 ### **Advanced Array Searching**
